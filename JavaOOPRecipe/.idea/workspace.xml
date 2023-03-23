@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="29b3af48-de52-486e-a0f3-51387b1ea62b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IBTodoExampleHL/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IBTodoExampleHL/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IBTodoExampleHL/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IBTodoExampleHL/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IBTodoExampleHL/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IBTodoExampleHL/src/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IBTodoExampleHL/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IBTodoExampleHL/todo2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IBTodoExampleHL/todos.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IBTodoExampleSL/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IBTodoExampleSL/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IBTodoExampleSL/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IBTodoExampleSL/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IBTodoExampleSL/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IBTodoExampleSL/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IBTodoExampleSL/IBTodo.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IBTodoExampleSL/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaOOPContact/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaOOPContact/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaOOPContact/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaOOPContact/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaOOPContact/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaOOPContact/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaOOPContact/JavaOOPContact.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaOOPContact/src/Contact.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaOOPContact/src/ContactsManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaOOPContact/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaOOPNote/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaOOPNote/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaOOPNote/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaOOPNote/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaOOPNote/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaOOPNote/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaOOPNote/JavaOOPNote.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaOOPNote/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaOOPNote/src/Note.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaOOPNote/src/NoteManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaOOPPassword/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaOOPPassword/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaOOPPassword/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaOOPPassword/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaOOPPassword/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaOOPPassword/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaOOPPassword/JavaOOPPassword.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaOOPPassword/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaOOPPassword/src/Password.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaOOPPassword/src/PasswordManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaOOPRecipe.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Recipe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/RecipeBook.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQLiteCRUD/SQLiteCRUD.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ibexample.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../first.java.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../main-first.java.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../main-notes.java.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../main-pass.java.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../main-recipe.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../notes.java.text" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pass.java.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe.java.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recipe.txt" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="2NQmgcAd6mK072d20AGr8de1sKJ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/kestas/Dropbox/Portal/IdeaProjects/ibexample/JavaOOPRecipe&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="29b3af48-de52-486e-a0f3-51387b1ea62b" name="Changes" comment="" />
+      <created>1679604793851</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1679604793851</updated>
+    </task>
+    <servers />
+  </component>
+</project>
