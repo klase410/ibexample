@@ -27,15 +27,19 @@ public class CrudExampleGui extends JFrame implements ActionListener {
         tablePanel.setBorder(BorderFactory.createTitledBorder("Users"));
 
         // Create the table model
-        tableModel = new DefaultTableModel(new Object[][]{}, new String[]{"ID", "Name", "Email"});
+        tableModel = new DefaultTableModel(new Object[][]{}, new String[]{"ID", "Name", "Email", "Age" });
 
         // Populate the table model with data from the database
         ResultSet resultSet = crudExample.getUsers();
+
+        System.out.print(resultSet.toString());
+
         while (resultSet.next()) {
             int id = resultSet.getInt("id");
             String name = resultSet.getString("name");
             String email = resultSet.getString("email");
-            tableModel.addRow(new Object[]{id, name, email});
+            int age = resultSet.getInt("age");
+            tableModel.addRow(new Object[]{id, name, email, age});
         }
         resultSet.close();
 
@@ -103,8 +107,9 @@ public class CrudExampleGui extends JFrame implements ActionListener {
                 int id = (int) tableModel.getValueAt(selectedRow, 0);
                 String name = (String) tableModel.getValueAt(selectedRow, 1);
                 String email = (String) tableModel.getValueAt(selectedRow, 2);
+                int age = (int) tableModel.getValueAt(selectedRow, 3);
 
-                JDialog dialog = createEditUserDialog(id, name, email);
+                JDialog dialog = createEditUserDialog(id, name, email, age);
                 dialog.setVisible(true);
             }
         } else if (e.getActionCommand().equals("Delete")) {
@@ -131,11 +136,11 @@ public class CrudExampleGui extends JFrame implements ActionListener {
         // Create the dialog
         JDialog dialog = new JDialog(this, "Add User", true);
         dialog.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-        dialog.setSize(300, 150);
+        dialog.setSize(500, 150);
         dialog.setLocationRelativeTo(this);
 
         // Create the main panel
-        JPanel mainPanel = new JPanel(new GridLayout(3, 2, 5, 5));
+        JPanel mainPanel = new JPanel(new GridLayout(4, 2, 5, 5));
         mainPanel.setBorder(new EmptyBorder(10, 10, 10, 10));
 
         // Create the name label and text field
@@ -150,6 +155,12 @@ public class CrudExampleGui extends JFrame implements ActionListener {
         mainPanel.add(emailLabel);
         mainPanel.add(emailField);
 
+        // Create the email label and text field
+        JLabel ageLabel = new JLabel("Age:");
+        JTextField ageField = new JTextField();
+        mainPanel.add(ageLabel);
+        mainPanel.add(ageField);
+
         // Create the OK button
         JButton okButton = new JButton("OK");
         okButton.addActionListener(new ActionListener() {
@@ -157,16 +168,36 @@ public class CrudExampleGui extends JFrame implements ActionListener {
                 // Get the name and email from the text fields
                 String name = nameField.getText();
                 String email = emailField.getText();
+                int age = Integer.parseInt(ageField.getText()); // int age = 30; -- initial code
 
                 try {
                     // Add the user to the database
-                    crudExample.createUser(name, email);
+                    int id = crudExample.createUser(name, email, age);
 
                     // Add the user to the table model
                     ResultSet resultSet = crudExample.getUsers();
-                    resultSet.last();
-                    int id = resultSet.getInt("id");
-                    tableModel.addRow(new Object[]{id, name, email});
+//                    resultSet.last();
+//                    int id = resultSet.getInt("id");
+                    tableModel.addRow(new Object[]{id, name, email, age}); // TODO: Fix TYPE FORWARD ONLY
+                    resultSet.close();
+
+//                    tableModel
+
+//                    // clean all rows
+//                    int rowCount = tableModel.getRowCount();
+//                    //Remove rows one by one from the end of the table
+//                    for (int i = rowCount - 1; i >= 0; i--) {
+//                        tableModel.removeRow(i);
+//                    }
+//
+//                    // load data from the database
+//                    while (resultSet.next()) {
+//                        int id1 = resultSet.getInt("id");
+//                        String name1 = resultSet.getString("name");
+//                        String email1 = resultSet.getString("email");
+//                        int age1 = resultSet.getInt("age");
+//                        tableModel.addRow(new Object[]{id1, name1, email1, age1});
+//                    }
                     resultSet.close();
 
                     // Close the dialog
@@ -195,15 +226,15 @@ public class CrudExampleGui extends JFrame implements ActionListener {
         return dialog;
     }
 
-    private JDialog createEditUserDialog(int id, String name, String email) {
+    private JDialog createEditUserDialog(int id, String name, String email, int age) {
         // Create the dialog
         JDialog dialog = new JDialog(this, "Edit User", true);
         dialog.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-        dialog.setSize(300, 150);
+        dialog.setSize(500, 150);
         dialog.setLocationRelativeTo(this);
 
         // Create the main panel
-        JPanel mainPanel = new JPanel(new GridLayout(3, 2, 5, 5));
+        JPanel mainPanel = new JPanel(new GridLayout(4, 2, 5, 5));
         mainPanel.setBorder(new EmptyBorder(10, 10, 10, 10));
 
         // Create the name label and text field
@@ -218,6 +249,12 @@ public class CrudExampleGui extends JFrame implements ActionListener {
         mainPanel.add(emailLabel);
         mainPanel.add(emailField);
 
+        // Create the age label and text field
+        JLabel ageLabel = new JLabel("Age:");
+        JTextField ageField = new JTextField(String.valueOf(age));
+        mainPanel.add(ageLabel);
+        mainPanel.add(ageField);
+
         // Create the OK button
         JButton okButton = new JButton("OK");
         okButton.addActionListener(new ActionListener() {
@@ -226,15 +263,17 @@ public class CrudExampleGui extends JFrame implements ActionListener {
 
                 String newName = nameField.getText();
                 String newEmail = emailField.getText();
+                int newAge = Integer.parseInt(ageField.getText()); // int newAge = 30; -- initial code
 
                 try {
                     // Update the user in the database
-                    crudExample.updateUser(id, newName, newEmail);
+                    crudExample.updateUser(id, newName, newEmail, newAge);
 
                     // Update the user in the table model
                     int selectedRow = table.getSelectedRow();
                     tableModel.setValueAt(newName, selectedRow, 1);
                     tableModel.setValueAt(newEmail, selectedRow, 2);
+                    tableModel.setValueAt(newAge, selectedRow, 3);
 
                     // Close the dialog
                     dialog.dispose();
