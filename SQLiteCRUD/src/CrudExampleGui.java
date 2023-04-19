@@ -38,7 +38,7 @@ public class CrudExampleGui extends JFrame implements ActionListener {
             int id = resultSet.getInt("id");
             String name = resultSet.getString("name");
             String email = resultSet.getString("email");
-            int age = resultSet.getInt("age");
+            long age = resultSet.getLong("age");
             tableModel.addRow(new Object[]{id, name, email, age});
         }
         resultSet.close();
@@ -107,7 +107,7 @@ public class CrudExampleGui extends JFrame implements ActionListener {
                 int id = (int) tableModel.getValueAt(selectedRow, 0);
                 String name = (String) tableModel.getValueAt(selectedRow, 1);
                 String email = (String) tableModel.getValueAt(selectedRow, 2);
-                int age = (int) tableModel.getValueAt(selectedRow, 3);
+                long age = (long) tableModel.getValueAt(selectedRow, 3);
 
                 JDialog dialog = createEditUserDialog(id, name, email, age);
                 dialog.setVisible(true);
@@ -168,7 +168,7 @@ public class CrudExampleGui extends JFrame implements ActionListener {
                 // Get the name and email from the text fields
                 String name = nameField.getText();
                 String email = emailField.getText();
-                int age = Integer.parseInt(ageField.getText()); // int age = 30; -- initial code
+                long age = Long.parseLong(ageField.getText()); // int age = 30; -- initial code
 
                 try {
                     // Add the user to the database
@@ -226,7 +226,7 @@ public class CrudExampleGui extends JFrame implements ActionListener {
         return dialog;
     }
 
-    private JDialog createEditUserDialog(int id, String name, String email, int age) {
+    private JDialog createEditUserDialog(int id, String name, String email, long age) {
         // Create the dialog
         JDialog dialog = new JDialog(this, "Edit User", true);
         dialog.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
@@ -263,7 +263,7 @@ public class CrudExampleGui extends JFrame implements ActionListener {
 
                 String newName = nameField.getText();
                 String newEmail = emailField.getText();
-                int newAge = Integer.parseInt(ageField.getText()); // int newAge = 30; -- initial code
+                long newAge = Long.parseLong(ageField.getText()); // int newAge = 30; -- initial code
 
                 try {
                     // Update the user in the database

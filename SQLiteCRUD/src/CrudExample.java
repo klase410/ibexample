@@ -14,13 +14,13 @@ public class CrudExample {
         statement.close();
     }
 
-    public int createUser(String name, String email, int age) throws SQLException {
+    public int createUser(String name, String email, long age) throws SQLException {
         // Insert a new user into the database
 
         PreparedStatement statement = connection.prepareStatement("INSERT INTO users (name, email, age) VALUES (?, ?, ?)");
         statement.setString(1, name);
         statement.setString(2, email);
-        statement.setInt(3, age);
+        statement.setLong(3, age);
         statement.executeUpdate();
         statement.close();
 
@@ -40,12 +40,12 @@ public class CrudExample {
         return -1;
     }
 
-    public void updateUser(int id, String name, String email, int age) throws SQLException {
+    public void updateUser(int id, String name, String email, long age) throws SQLException {
         // Update an existing user in the database
         PreparedStatement statement = connection.prepareStatement("UPDATE users SET name=?, email=?, age=? WHERE id=?");
         statement.setString(1, name);
         statement.setString(2, email);
-        statement.setInt(3, age);
+        statement.setLong(3, age);
         statement.setInt(4, id);
         statement.executeUpdate();
 
@@ -76,11 +76,15 @@ public class CrudExample {
             // Display all users
             ResultSet resultSet = crudExample.getUsers();
             while (resultSet.next()) {
-                System.out.println(resultSet.getInt("id") + " " + resultSet.getString("name") + " " + resultSet.getString("email") + " " + resultSet.getInt("age"));
+                System.out.println(resultSet.getInt("id") + " " + resultSet.getString("name") + " " + resultSet.getString("email") + " " + resultSet.getLong("age"));
             }
 
+            long test = Long.parseLong("1234567890123"); // isbn
+            System.out.println(test);
+
             // Create a new user
-            crudExample.createUser("John Doe", "johndoe@example.com", 30);
+            crudExample.createUser("John Doe", "johndoe@example.com", test);
+
 
             // Update a user
 //            crudExample.updateUser(1, "Jane Doe", "janedoe@example.com");
@@ -91,7 +95,7 @@ public class CrudExample {
             // Display all users
             resultSet = crudExample.getUsers();
             while (resultSet.next()) {
-                System.out.println(resultSet.getInt("id") + " " + resultSet.getString("name") + " " + resultSet.getString("email") + " " + resultSet.getInt("age"));
+                System.out.println(resultSet.getInt("id") + " " + resultSet.getString("name") + " " + resultSet.getString("email") + " " + resultSet.getLong("age"));
             }
 
             resultSet.close();

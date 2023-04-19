@@ -1,6 +1,8 @@
-/IBTodoExampleSL/out/
-/IBTodoExampleHL/out/
-/JavaOOPContact/out/
-/JavaOOPNote/out/
-/JavaOOPPassword/out/
-/JavaOOPRecipe/out/
+IBTodoExampleSL/out/
+IBTodoExampleHL/out/
+JavaOOPContact/out/
+JavaOOPNote/out/
+JavaOOPPassword/out/
+JavaOOPRecipe/out/
+SQLiteCRUD/out/
+SQLiteCRUD/example.db
